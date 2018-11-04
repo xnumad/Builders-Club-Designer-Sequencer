@@ -4,6 +4,8 @@
 
 **Solution**: Sequencing the packets (sending them one after the other) using this extension, which cannot be done using the built-in scheduler. Placing your item capacity, then 1 pickallbc packet, then repeat.
 
+**Built for Tanji v1.4.1238**
+
 Actually my first to GitHub pushed repository, via the GitHub Desktop client which was easier than with the Visual Studio extension.
 Feel free to contribute i.e. by adding an option to automatically grab *the packet headers* or *the coordinates to place the furniture*.
 
