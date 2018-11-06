@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Builders Club";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmr_interval)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
