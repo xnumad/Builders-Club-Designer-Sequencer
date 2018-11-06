@@ -52,19 +52,19 @@ namespace Builders_Club_Designer_Sequencer
             }*/ //System.Threading.Thread.Sleep() doesn't fucking work as intended: not only does the whole Tanji UI freeze but also the packets won't be sent
 
             //Nevermind, fuck you System.Threading.Thread.Sleep(), then we use the following method
-            timer1.Interval = Convert.ToInt32(nmr_interval.Value); //update timer interval before starting it (important)
-            timer1.Start();
+            timer.Interval = Convert.ToInt32(nmr_interval.Value); //update timer interval before starting it (important)
+            timer.Start();
         }
 
         private void btn_stop_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
+            timer.Stop();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
             lbl_counter.Text = counter.ToString(); //starts with 1
-            timer1.Interval = Convert.ToInt32(nmr_interval.Value); //update label to display counter value
+            timer.Interval = Convert.ToInt32(nmr_interval.Value); //update label to display counter value
 
             Connection.SendToServerAsync(place_furni);
 

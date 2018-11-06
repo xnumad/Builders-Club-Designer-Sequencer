@@ -33,7 +33,7 @@
             this.btn_stop = new System.Windows.Forms.Button();
             this.lbl_counter = new System.Windows.Forms.Label();
             this.nmr_interval = new System.Windows.Forms.NumericUpDown();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nmr_interval)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +84,11 @@
             0,
             0});
             // 
-            // timer1
+            // timer
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 566;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer.Enabled = true;
+            this.timer.Interval = 566;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Builders Club";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmr_interval)).EndInit();
             this.ResumeLayout(false);
@@ -115,7 +116,7 @@
         private System.Windows.Forms.Button btn_stop;
         private System.Windows.Forms.Label lbl_counter;
         private System.Windows.Forms.NumericUpDown nmr_interval;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
