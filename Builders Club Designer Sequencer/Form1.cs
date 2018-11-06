@@ -54,11 +54,21 @@ namespace Builders_Club_Designer_Sequencer
             //Nevermind, fuck you System.Threading.Thread.Sleep(), then we use the following method
             timer.Interval = Convert.ToInt32(nmr_interval.Value); //update timer interval before starting it (important)
             timer.Start();
+            btn_start.Hide();
         }
 
-        private void btn_stop_Click(object sender, EventArgs e)
+        private void btn_pause_Click(object sender, EventArgs e)
         {
-            timer.Stop();
+            if (btn_pause.Text == "⏸Pause")
+            {
+                timer.Stop();
+                btn_pause.Text = "▶Resume";
+            }
+            else if (btn_pause.Text == "▶Resume")
+            {
+                timer.Start();
+                btn_pause.Text = "⏸Pause";
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)

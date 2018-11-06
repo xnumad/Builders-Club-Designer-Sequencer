@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btn_start = new System.Windows.Forms.Button();
-            this.btn_stop = new System.Windows.Forms.Button();
+            this.btn_pause = new System.Windows.Forms.Button();
             this.lbl_counter = new System.Windows.Forms.Label();
             this.nmr_interval = new System.Windows.Forms.NumericUpDown();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -47,15 +47,15 @@
             this.btn_start.UseVisualStyleBackColor = true;
             this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
-            // btn_stop
+            // btn_pause
             // 
-            this.btn_stop.Location = new System.Drawing.Point(0, 23);
-            this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(75, 23);
-            this.btn_stop.TabIndex = 1;
-            this.btn_stop.Text = "Stop";
-            this.btn_stop.UseVisualStyleBackColor = true;
-            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
+            this.btn_pause.Location = new System.Drawing.Point(0, 23);
+            this.btn_pause.Name = "btn_pause";
+            this.btn_pause.Size = new System.Drawing.Size(75, 23);
+            this.btn_pause.TabIndex = 1;
+            this.btn_pause.Text = "⏸Pause";
+            this.btn_pause.UseVisualStyleBackColor = true;
+            this.btn_pause.Click += new System.EventHandler(this.btn_pause_Click);
             // 
             // lbl_counter
             // 
@@ -97,7 +97,7 @@
             this.ClientSize = new System.Drawing.Size(133, 46);
             this.Controls.Add(this.nmr_interval);
             this.Controls.Add(this.lbl_counter);
-            this.Controls.Add(this.btn_stop);
+            this.Controls.Add(this.btn_pause);
             this.Controls.Add(this.btn_start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
@@ -113,7 +113,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_start;
-        private System.Windows.Forms.Button btn_stop;
+        private System.Windows.Forms.Button btn_pause;
         private System.Windows.Forms.Label lbl_counter;
         private System.Windows.Forms.NumericUpDown nmr_interval;
         private System.Windows.Forms.Timer timer;
