@@ -33,8 +33,8 @@ namespace Builders_Club_Designer_Sequencer
         {
             RoomPlaceBuildersClubItem = Game.GetMessageIds("d4ad71c88ad31880e7bcb6443a0d2df3").FirstOrDefault();
             RoomUserTalk = Game.GetMessageIds("42de77b85f9a094e695fa6fbeb60bc8f").FirstOrDefault();
-            pickallbc = new HMessage(588, new object[] { ":pickallbc", 0, -1 }); //{l}{u:588}{s::pickallbc}{i:0}{i:-1}
-            place_furni = new HMessage(1956, new object[] { 714113, 4704, "", x_coord, y_coord, 0 }); //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0}
+            pickallbc = new HMessage(RoomUserTalk, new object[] { ":pickallbc", 0, -1 }); //{l}{u:588}{s::pickallbc}{i:0}{i:-1}
+            place_furni = new HMessage(RoomPlaceBuildersClubItem, new object[] { 714113, 4704, "", x_coord, y_coord, 0 }); //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0}
             btn_start_Click(null, null);
         }
 
