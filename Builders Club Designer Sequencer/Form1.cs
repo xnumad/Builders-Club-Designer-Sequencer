@@ -16,8 +16,6 @@ namespace Builders_Club_Designer_Sequencer
     [Module("Builders Club Designer Sequencer", "Level the Builders Club Designer achievement (ACH_RoomDecoBC)")]
     public partial class Form1 : ExtensionForm
     {
-        private ushort RoomPlaceBuildersClubItem;
-        private ushort RoomUserTalk;
         private HMessage pickallbc;
         private HMessage place_furni;
         private uint counter = 1;
@@ -31,10 +29,8 @@ namespace Builders_Club_Designer_Sequencer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            RoomPlaceBuildersClubItem = Game.GetMessageIds("d4ad71c88ad31880e7bcb6443a0d2df3").FirstOrDefault();
-            RoomUserTalk = Game.GetMessageIds("42de77b85f9a094e695fa6fbeb60bc8f").FirstOrDefault();
-            pickallbc = new HMessage(RoomUserTalk, new object[] { ":pickallbc", 0, -1 }); //{l}{u:588}{s::pickallbc}{i:0}{i:-1}
-            place_furni = new HMessage(RoomPlaceBuildersClubItem, new object[] { 714113, 4704, "", x_coord, y_coord, 0 }); //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0}
+            pickallbc = new HMessage(Out.RoomUserTalk, new object[] { ":pickallbc", 0, -1 }); //{l}{u:588}{s::pickallbc}{i:0}{i:-1}
+            place_furni = new HMessage(Out.RoomPlaceBuildersClubItem, new object[] { 714113, 4704, "", x_coord, y_coord, 0 }); //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0}
             btn_start_Click(null, null);
         }
 
