@@ -19,7 +19,6 @@ namespace Builders_Club_Designer_Sequencer
         private HMessage pickallbc;
         private HMessage place_furni;
         private uint counter = 1;
-        private uint builders_club_borrowed_items_capacity = 50; //depending on your free borrowed items amount (usually 50)
         private int x_coord = 5, y_coord = 5; //depending on your room layout
 
         public Form1()
@@ -74,7 +73,7 @@ namespace Builders_Club_Designer_Sequencer
 
             Connection.SendToServerAsync(place_furni);
 
-            if (counter < (builders_club_borrowed_items_capacity)) //continue counting as long as capacity is not reached
+            if (counter < (Convert.ToUInt32(nmr_capacity.Value))) //continue counting as long as capacity is not reached
             {
                 counter++;
             }
