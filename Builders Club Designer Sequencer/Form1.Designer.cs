@@ -38,12 +38,14 @@
             this.lbl_interval = new System.Windows.Forms.Label();
             this.lbl_capacity = new System.Windows.Forms.Label();
             this.nmr_capacity = new System.Windows.Forms.NumericUpDown();
+            this.lbl_start_hint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_interval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_capacity)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_start
             // 
+            this.btn_start.Enabled = false;
             this.btn_start.Location = new System.Drawing.Point(12, 76);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(159, 23);
@@ -54,6 +56,7 @@
             // 
             // btn_pause
             // 
+            this.btn_pause.Enabled = false;
             this.btn_pause.Location = new System.Drawing.Point(177, 76);
             this.btn_pause.Name = "btn_pause";
             this.btn_pause.Size = new System.Drawing.Size(92, 23);
@@ -91,8 +94,6 @@
             // 
             // timer
             // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 566;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // lbl_currently_placed_items
@@ -139,14 +140,25 @@
             0,
             0});
             // 
+            // lbl_start_hint
+            // 
+            this.lbl_start_hint.AutoSize = true;
+            this.lbl_start_hint.ForeColor = System.Drawing.Color.Red;
+            this.lbl_start_hint.Location = new System.Drawing.Point(12, 60);
+            this.lbl_start_hint.Name = "lbl_start_hint";
+            this.lbl_start_hint.Size = new System.Drawing.Size(254, 13);
+            this.lbl_start_hint.TabIndex = 2;
+            this.lbl_start_hint.Text = "Place a stackable BC furniture in your room to begin!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 160);
+            this.ClientSize = new System.Drawing.Size(281, 142);
             this.Controls.Add(this.nmr_capacity);
             this.Controls.Add(this.nmr_interval);
             this.Controls.Add(this.lbl_capacity);
+            this.Controls.Add(this.lbl_start_hint);
             this.Controls.Add(this.lbl_interval);
             this.Controls.Add(this.lbl_currently_placed_items);
             this.Controls.Add(this.lbl_counter);
@@ -175,6 +187,7 @@
         private System.Windows.Forms.Label lbl_interval;
         private System.Windows.Forms.Label lbl_capacity;
         private System.Windows.Forms.NumericUpDown nmr_capacity;
+        private System.Windows.Forms.Label lbl_start_hint;
     }
 }
 

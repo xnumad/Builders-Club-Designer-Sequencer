@@ -9,11 +9,6 @@
 Actually my first to GitHub pushed repository, via the GitHub Desktop client which was easier than with the Visual Studio extension.
 Feel free to contribute e.g. by adding an option to automatically grab *the coordinates to place the furniture*.
 
-# Get going
-- *optionally* change the value of `builders_club_borrowed_items_capacity` to match your capacity/limit of items you can place
-- update the integers in the packet to place the furniture (they seem to change every few days)
-- make sure the coordinates the furniture is being placed is a tile in the room you are in (x and y coordinates are 5 by default) or change the coordinate integers in the packet
-
 # Sequencing interval
 The value displayed in the NumericUpDown = the interval to send the packets in milliseconds
 
