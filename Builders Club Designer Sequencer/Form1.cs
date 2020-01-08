@@ -32,19 +32,19 @@ namespace Builders_Club_Designer_Sequencer
             pickallbc = new HMessage(Out.RoomUserTalk, new object[] { ":pickallbc", 0, -1 }); //{l}{u:588}{s::pickallbc}{i:0}{i:-1}
         }
 
+        private void SavePacket(DataInterceptedEventArgs obj)
+        {
+            place_furni = obj.Packet; //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0} //Saves the packet to place a BC furni
+            lbl_start_hint.Visible = false;
+            btn_start.Enabled = true;
+        }
+
         private void btn_start_Click(object sender, EventArgs e)
         {
             timer.Interval = Convert.ToInt32(nmr_interval.Value); //update timer interval before starting it (important)
             timer.Start();
             btn_start.Visible = false;
             btn_pause.Enabled = true;
-        }
-
-        private void SavePacket(DataInterceptedEventArgs obj)
-        {
-            place_furni = obj.Packet; //{l}{u:1956}{i:837444}{i:9123}{s:}{i:5}{i:5}{i:0} //Saves the packet to place a BC furni
-            lbl_start_hint.Visible = false;
-            btn_start.Enabled = true;
         }
 
         private void btn_pause_Click(object sender, EventArgs e)
@@ -72,7 +72,6 @@ namespace Builders_Club_Designer_Sequencer
             {
                 counter++;
             }
-
             else //pickallbc and set counter back to 1 elsewise
             {
                 Connection.SendToServerAsync(pickallbc);
