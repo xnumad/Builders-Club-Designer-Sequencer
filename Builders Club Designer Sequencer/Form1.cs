@@ -15,6 +15,7 @@ using Tangine;
 namespace Builders_Club_Designer_Sequencer
 {
     [Module("Builders Club Designer Sequencer", "Level the Builders Club Designer achievement (ACH_RoomDecoBC)")]
+    [Author("tonmAr", ResourceName = "GitHub repository", ResourceUrl = "https://github.com/xnumad/Builders-Club-Designer-Sequencer")]
     public partial class Form1 : ExtensionForm
     {
         private HMessage pickallbc;
