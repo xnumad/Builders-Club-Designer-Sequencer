@@ -64,8 +64,7 @@ namespace Builders_Club_Designer_Sequencer
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            lbl_counter.Text = counter.ToString(); //starts with 1
-            timer.Interval = Convert.ToInt32(nmr_interval.Value); //update label to display counter value
+            lbl_counter.Text = counter.ToString(); //starts with 1 //update label to display counter value
 
             Connection.SendToServerAsync(place_furni);
 
@@ -78,6 +77,11 @@ namespace Builders_Club_Designer_Sequencer
                 Connection.SendToServerAsync(pickallbc);
                 counter = 1;
             }
+        }
+
+        private void nmr_interval_ValueChanged(object sender, EventArgs e)
+        {
+            timer.Interval = (int)nmr_interval.Value;
         }
     }
 }
