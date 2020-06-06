@@ -25,6 +25,7 @@ namespace Builders_Club_Designer_Sequencer
         public Form1()
         {
             InitializeComponent();
+            nmr_interval_ValueChanged(null, null);
             Triggers.OutAttach(Out.RoomPlaceBuildersClubItem, SavePacket);
         }
 
@@ -42,7 +43,6 @@ namespace Builders_Club_Designer_Sequencer
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            timer.Interval = Convert.ToInt32(nmr_interval.Value); //update timer interval before starting it (important)
             timer.Start();
             btn_start.Visible = false;
             btn_pause.Enabled = true;
